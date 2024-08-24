@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/button";
+import { sendGTMEvent } from "@/lib/gtm";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,7 +18,15 @@ export default function Home() {
         </ul>
       </nav>
 
-      <Button text="Click me!!" onClick={() => console.log("btn clicked")} />
+      <Button
+        text="Click me!!"
+        onClick={() =>
+          sendGTMEvent({
+            event: "customEvent",
+            data: { name: "test click me" },
+          })
+        }
+      />
     </main>
   );
 }
