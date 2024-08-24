@@ -17,7 +17,7 @@ export default function Home() {
         </ul>
       </nav>
 
-      <Button text="Cenas" onClick={() => console.log("cenas")} />
+      <Button text="Click me!!" onClick={() => console.log("btn clicked")} />
     </main>
   );
 }
