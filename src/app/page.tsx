@@ -23,7 +23,7 @@ export default function Home() {
         onClick={() =>
           sendGTMEvent({
             event: "customEvent",
-            data: { name: "test click me" },
+            content_type: "test click me",
           })
         }
       />
