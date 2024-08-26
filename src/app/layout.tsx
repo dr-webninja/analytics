@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { GoogleTagManager } from "@/lib/gtm";
-import CookieBanner from "@/components/cookies";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
 
-      <body className={inter.className}>
-        {children}
-        <CookieBanner />
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

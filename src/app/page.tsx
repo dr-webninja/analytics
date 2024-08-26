@@ -27,6 +27,18 @@ export default function Home() {
           })
         }
       />
+
+      <Button
+        text="Allow cookies"
+        onClick={() =>
+          window.gtag("consent", "update", {
+            ad_storage: "granted",
+            analytics_storage: "granted",
+            ad_user_data: "granted",
+            ad_personalization: "granted",
+          })
+        }
+      />
     </main>
   );
 }
