@@ -19,6 +19,16 @@ export default function Home() {
       </nav>
 
       <Button
+        text="Login"
+        onClick={() =>
+          sendGTMEvent({
+            event: "userData",
+            userId: "t2c6becf0-7d1b-45eb-bf77-850bd3ac17e6",
+          })
+        }
+      />
+
+      <Button
         text="Click me!!"
         onClick={() =>
           sendGTMEvent({
