@@ -1,15 +1,21 @@
-"use client";
+import Client from "@/components/client";
+import Link from "next/link";
 
-import Button from "@/components/button";
-import { useRouter } from "next/navigation";
+export default async function Page1() {
+  const xpto = await fetch("https://jsonplaceholder.typicode.com/todos/1").then(
+    (response) => response.json()
+  );
 
-export default function Page1() {
-  const router = useRouter();
+  console.log("PAGE 1");
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="flex min-h-screen flex-col  p-24">
       <h1>Page 1</h1>
 
-      <Button text="Go Back" onClick={() => router.back()} />
+      <Link href="/page2">Go to Page 2</Link>
+
+      <Client />
+      {JSON.stringify(xpto, null, 2)}
     </div>
   );
 }
