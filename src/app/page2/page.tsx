@@ -1,5 +1,7 @@
 import Client from "@/components/client";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page2() {
   const xpto = await fetch("https://jsonplaceholder.typicode.com/todos").then(
     (response) => response.json()
